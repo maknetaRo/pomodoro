@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(10, 10, 29);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aqua;
+}
+
+h1 {
+  padding: 1.25rem;
+  letter-spacing: 1px;
+}
+.box {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.clock {
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  border: 6px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.time {
+  color: aqua;
+  font-size: 6.5rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 3rem;
+}
+.btn {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  margin-left: 10px;
+}
+.btn-start:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 60%;
+  background-color: white;
+  right: 18%;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+.btn-pause {
+  flex-direction: column;
+  justify-content: space-around;
+}
+.btn-pause:before,
+.btn-pause:after {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 10px;
+  background-color: white;
+}
+.btn-pause:before {
+  top: 30%;
+}
+.btn-pause:after {
+  top: 60%;
+}
+.btn-stop:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
+
+.btn-plus:before,
+.btn-plus:after,
+.btn-minus:before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 10px;
+  background-color: white;
+}
+
+.btn-plus:after {
+  transform: rotate(90deg);
+}
